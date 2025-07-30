@@ -1434,8 +1434,11 @@
                 .then(data => {
                     console.log('Sucesso:', data);
                     form.reset(); // Limpa o formulário
-                    if(formStatus) formStatus.innerHTML = `<p style="color: var(--accent);">Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.</p>`;
+                    if(formStatus) formStatus.innerHTML = '<p style="color: var(--accent);">Cadastro enviado com sucesso! Redirecionando...</p>';
                     submitButton.innerHTML = 'Enviado!';
+                    setTimeout(() => {
+                        window.location.href = 'obrigado.html';
+                    }, 1200);
                 })
                 .catch((error) => {
                     console.error('Erro:', error);
