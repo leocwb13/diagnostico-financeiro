@@ -1,1305 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-54VH7DCH');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Planejamento Financeiro Pessoal – Leonardo Graciano (W1 Consultoria)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+     })(window,document,'script','dataLayer','GTM-54VH7DCH');</script>
+     <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <title>Planejamento Financeiro Personalizado | LG Consultoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --accent: #32ddc9; 
-            --accent-dark: #28b0a4;
-            --bg-dark: #022028;    
-            --bg-medium-dark: #0a131a; 
-            --bg-light: #f4f6f8; 
-            --card-bg: #ffffff;
-            --text-dark: #1f2937; 
-            --text-medium: #4b5563;
-            --text-light: #6b7280;
-            --text-white: #ffffff;
-            --border-color: #e5e7eb;
-            --border-dark-theme: #374151;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --transition: 0.3s ease;
-            --container-padding: 1.5rem;
-            --header-height: 70px;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            background: var(--bg-light); 
-            color: var(--text-dark); 
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        main {
-            padding-top: var(--header-height);
-        }
-        a { text-decoration: none; color: var(--accent); transition: color var(--transition); }
-        a:hover { color: var(--accent-dark); }
-        img, svg { max-width: 100%; display: block; }
-        
-        .container { 
-            width: 90%; 
-            max-width: 1200px; 
-            margin-left: auto;
-            margin-right: auto; 
-            padding-left: var(--container-padding);
-            padding-right: var(--container-padding);
-        }
-
-        section { padding: 5rem 0; }
-        .section-header { margin-bottom: 3.5rem; text-align: center; }
-        .section-tag {
-            display: inline-block; padding: 0.3rem 0.9rem;
-            background-color: rgba(50, 221, 201, 0.1); 
-            color: var(--accent); border-radius: 9999px; 
-            font-size: 0.8rem; font-weight: 600;
-            margin-bottom: 1rem; text-transform: uppercase;
-            letter-spacing: 0.075em;
-        }
-        .dark-section .section-tag { background-color: rgba(255, 255, 255, 0.1); }
-        .section-title { 
-            font-size: clamp(2rem, 5vw, 2.75rem); 
-            font-weight: 700; margin-bottom: 1rem; 
-            color: var(--text-dark); line-height: 1.25;
-        }
-        .section-subtitle { 
-            font-size: clamp(1rem, 2.5vw, 1.125rem); 
-            color: var(--text-medium); max-width: 750px; 
-            margin-left: auto; margin-right: auto; 
-        }
-        .dark-section .section-title, .dark-section .section-subtitle { color: var(--text-white); }
-        .dark-section .section-subtitle { color: rgba(255,255,255,0.85); }
-
-        /* === HEADER ========================================================== */
-        header {
-        background: #012028;
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        z-index: 1000;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: var(--shadow-sm);
-        height: var(--header-height);
-        display: flex;
-        align-items: center;
-        }
-        .header-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        }
-        /* hambúrguer só desktop, some depois */
-        .mobile-menu-btn {
-        background: none;
-        border: none;
-        font-size: 1.75rem;
-        color: var(--text-dark);
-        cursor: pointer;
-        padding: .5rem;
-        }
-
-        /* iframe totalmente fluido e sem overflow lateral ------------------ */
-        .video-block{
-        width:100%;
-        aspect-ratio:16/9;             /* já existia – mantemos            */
-        }
-        .video-block iframe{
-        width:100%!important;
-        height:100%!important;
-        border:0;
-        }
-        /* garante que o grid mude para 1 coluna abaixo de 768 px ------------ */
-        @media(max-width:767px){
-        #w1-technology .container{
-            grid-template-columns:1fr!important;
-        }
-        }
-
-        /* NAV DESKTOP */
-        @media (min-width: 992px) {
-        nav { display: block; }
-        .mobile-menu-btn { display: none; }
-        .nav-list { display: flex; gap: 2rem; align-items: center; list-style: none; }
-        .nav-list a:not(.btn) {
-            font-size: .95rem; color: var(--text-medium); font-weight: 500;
-            position: relative; padding-bottom: .3rem;
-        }
-        .nav-list a:not(.btn)::after {
-            content: ''; position: absolute; bottom: 0; left: 0;
-            width: 0; height: 2px; background: var(--accent);
-            transition: width .3s ease;
-        }
-        .nav-list a:not(.btn):hover { color: var(--text-dark); }
-        .nav-list a:not(.btn):hover::after { width: 100%; }
-        }
-
-        /* MOBILE (< 992 px) – ESCONDE MENU e HAMBÚRGUER */
-        @media (max-width: 991px) {
-        nav, .mobile-menu-btn { display: none !important; }
-        /* 1. o contêiner de texto ocupa 90 % da largura
-        e fica centralizado na tela                */
-        .hero-content{
-            max-width: 90%;
-            margin: 0 auto;          /* tira a margem-left:5% */
-        }
-
-        /* 2. título e parágrafo com largura total,
-                evitando linhas curtinhas                    */
-        .hero-content h1{          /* (tamanho do texto já
-                                        está reponsivo pelo clamp) */
-            line-height: 1.25;
-        }
-
-        .hero-content p{
-            max-width: 100%;         /* antes herdava 700 px  */
-            color: rgba(255,255,255,.92);  /* branco “vivo”   */
-        }
-
-        }
-
-        /* === BOTÃO FLUTUANTE “Fale comigo” =================================== */
-        .mobile-cta {
-        position: fixed;
-        bottom: 1rem;
-        right: 1rem;
-        z-index: 999;
-        background: var(--accent);
-        color: #012025;
-        padding: .9rem 1.6rem;
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 1rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,.25);
-        transition: background .25s, transform .25s;
-        }
-        .mobile-cta:hover {
-        background: var(--accent-dark);
-        transform: translateY(-2px);
-        }
-        @media (min-width: 992px) {
-        .mobile-cta { display: none; }
-        }
-
-
-        /* Progress Bar */
-        .progress-bar { 
-            position: fixed; 
-            top: var(--header-height); 
-            left: 0; 
-            width: 0%; 
-            height: 4px; 
-            background: var(--accent); 
-            z-index: 1001; 
-            transition: width 0.15s ease-out; }
-
-            /* Hero Section */
-            .hero {
-            position: relative;
-            display: flex;
-            align-items: center;
-            min-height: 80vh;
-            overflow: hidden;
-            text-align: left;
-            }
-            /* camada da imagem com filtro de brilho */
-            .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url('https://consultoria.leonardograciano.com.br/img/atlas.jpg') 
-                        center right/cover no-repeat;
-            filter: brightness(0.5) contrast(1.1);
-            z-index: 0;
-            }
-            /* gradiente mais largo e mais escuro */
-            .hero::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; bottom: 0;
-            width: 65%;
-            background: linear-gradient(
-                to right,
-                rgba(2,23,31,0.9) 0%,
-                rgba(2,23,31,0) 100%
-            );
-            z-index: 1;
-            }
-
-            .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 45%;
-            margin-left: 5%;
-            }
-            .section-tag {
-            display: inline-block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--accent);
-            letter-spacing: 1px;
-            margin-bottom: 0.75rem;
-            }
-            .hero-content h1 {
-            font-size: clamp(2rem,5vw,3rem);
-            font-weight: 300;
-            color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            }
-            .hero-content p {
-            font-size: clamp(1rem,2.5vw,1.25rem);
-            color: rgba(255,255,255,.92);
-            margin-bottom: 2rem;
-            }
-            .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.75rem;
-            font-size: 1rem;
-            font-weight: 600;
-            background: var(--accent);
-            color: var(--text-white);
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s;
-            }
-            .btn-primary:hover {
-            background: var(--accent-dark);
-            }
-
-        /* Solutions Section */
-        .solutions-pf { background: white; }
-        .solutions-pf-grid { 
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(1, 1fr); /* padrão mobile */
-            transition: all 0.3s ease;
-            }
-
-            @media (min-width: 768px) {
-            .solutions-pf-grid {
-                grid-template-columns: repeat(2, 1fr); /* tablets */
-            }
-            }
-
-            @media (min-width: 1024px) {
-            .solutions-pf-grid {
-                grid-template-columns: repeat(4, 1fr); /* desktop com 4 cards fixos */
-            }
-        }
-        .solution-pf-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: left;
-            transition: all var(--transition);
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-md);
-        }
-        .solution-pf-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
-        .solution-pf-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            width: 48px;
-            height: 48px;
-        }
-        .solution-pf-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .solution-pf-card p {
-            font-size: 0.95rem;
-            color: var(--text-medium);
-            flex-grow: 1; 
-            margin-bottom: 1.5rem;
-        }
-        .solution-pf-card a { font-weight: 600; display:inline-flex; align-items:center; gap: 0.5rem;}
-        
-        /* Passo a Passo Section */
-        .passo-a-passo { background-color: var(--bg-dark); }
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 3rem auto 0;
-            list-style: none;
-            padding: 1rem 0;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 22px;
-            bottom: 22px;
-            left: 21px;
-            width: 2px;
-            background: var(--border-dark-theme);
-             z-index: 1;
-        }
-        .timeline-item {
-            margin-bottom: 50px;
-            position: relative;
-            padding-left: 65px;
-        }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-number {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: var(--bg-dark);
-            font-size: 1.2rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 4px solid var(--bg-dark);
-            z-index: 2;
-        }
-        .timeline-content h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-white);
-            margin-bottom: 0.5rem;
-        }
-        .timeline-content p {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
-        }
-
-        /* Social Proof Section - com imagem + gradiente */
-        .social-proof {
-        position: relative;
-        background: url('https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?cs=srgb&dl=pexels-cytonn-955395.jpg&fm=jpg') center right / cover no-repeat;
-        min-height: 420px;
-        display: flex;
-        align-items: center;
-        }
-
-        .social-proof::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, rgba(2, 23, 31, 0.92) 35%, rgba(2, 23, 31, 0.4) 100%);
-        z-index: 0;
-        }
-
-        .social-proof-overlay {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        padding: 4rem 5%;
-        display: flex;
-        justify-content: flex-start;
-        }
-
-        .social-proof-content {
-        max-width: 600px;
-        color: white;
-        }
-
-        .social-proof-content h2 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        }
-
-        .social-proof-content .highlight-number {
-        color: #32DDC9;
-        }
-
-        .social-proof-content p {
-        font-size: 1.2rem;
-        margin-bottom: 2.5rem;
-        line-height: 1.6;
-        color: rgba(255,255,255,0.95);
-        }
-
-        .social-proof-content .btn-primary {
-        background: #32DDC9;
-        color: #012025;
-        padding: 0.875rem 1.75rem;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 1rem;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        transition: background 0.3s ease;
-        }
-        .social-proof-content .btn-primary:hover {
-        background: #28c2b7;
-        }
-        @media(max-width:767px){
-        .social-proof-content h2,
-        .social-proof-content p{color:#ffffff}
-        .social-proof::before{
-            background:linear-gradient(to right,
-                rgba(2,23,31,.93) 45%,
-                rgba(2,23,31,.55) 100%);
-        }
-        }
-
-        /* Clientes Parceiros*/
-        .client-logos-section {
-        background: var(--bg-light);
-        padding: 4rem 0;
-        text-align: center;
-        }
-
-        .client-logos-section .section-header {
-        margin-bottom: 2rem;
-        }
-
-        .client-logos-section .section-header h3 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-        color: var(--text-dark);
-        }
-
-        .client-logos-section .section-header p {
-        font-size: 1rem;
-        color: var(--text-medium);
-        max-width: 600px;
-        margin: 0 auto;
-        }
-
-        .rfm-marquee-container {
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        margin-top: 2rem;
-        }
-
-        .rfm-marquee {
-        display: flex;
-        align-items: center;
-        animation: marqueeScroll var(--duration, 20s) linear infinite;
-        gap: 3rem;
-        }
-
-        .client-logo {
-        height: 50px;
-        object-fit: contain;
-        opacity: 0.8;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .client-logo:hover {
-        transform: scale(1.1);
-        opacity: 1;
-        }
-
-        @keyframes marqueeScroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-50%)); }
-        }
-
-        
-        /* Testimonials Section */
-        .testimonial-wrapper {
-        position: relative;
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        overflow: hidden;
-        padding-bottom: 2rem;
-        }
-
-        .testimonial-list {
-        display: flex;
-        gap: 1.5rem;
-        transition: transform 0.5s ease-in-out;
-        }
-
-        .testimonial-card-v2 {
-        background: var(--card-bg);
-        border-radius: 12px;
-        padding: 2rem;
-        flex: 0 0 100%;
-        border: 1px solid var(--border-color);
-        text-align: left;
-        }
-
-        @media (min-width: 640px) {
-        .testimonial-card-v2 {
-            flex: 0 0 48%;
-        }
-        }
-
-        @media (min-width: 992px) {
-        .testimonial-card-v2 {
-            flex: 0 0 31%;
-        }
-        }
-
-        /* transicao w1 na midia */
-        .section-divider {
-        display: block;
-        height: 80px;
-        overflow: hidden;
-        line-height: 0;
-        background-color: transparent;
-        }
-
-        .section-divider svg {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-        }   
-
-
-        /* W1 na Midia */
-        .media-card {
-            background: #fff;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            flex-shrink: 0;
-            width: 200px;
-            transition: transform .3s, box-shadow .3s;
-            }
-        .media-card img {
-            border-radius: 4px;
-            margin-bottom: .5rem;
-            width: 100%; height: auto;
-            }
-            .media-card h3 {
-            font-size: 1rem; font-weight: 600;
-            }
-            .media-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            }
-
-
-
-        /* About Section */
-        .about-container { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
-        @media (min-width: 992px) { .about-container { grid-template-columns: calc(55% - 2rem) calc(45% - 2rem); gap: 4rem; } .about-image { order: 2; } .about-text { order: 1; } }
-        .about-text .section-tag { margin-bottom: 1rem; }
-        .about-text .section-title { text-align: left; margin-bottom: 1.5rem;}
-        .about-text p { font-size: 1rem; color: var(--text-medium); margin-bottom: 1.25rem; }
-        .about-image img { border-radius: 12px; box-shadow: var(--shadow-lg); width:100%; height:auto; aspect-ratio: 4/5; object-fit: cover;}
-        .about-text .btn { margin-top:1rem; }
-        
-        /* FAQ Section */
-        .faq-grid { max-width: 800px; margin-left:auto; margin-right:auto; }
-        .faq-item { margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--card-bg); box-shadow: var(--shadow-sm); transition: box-shadow var(--transition); }
-        .faq-item:hover { box-shadow: var(--shadow-md); }
-        .faq-item summary { font-size: 1.125rem; font-weight: 500; cursor: pointer; padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; list-style: none; }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after { content: '+'; font-size: 1.75rem; color: var(--accent); transition: transform var(--transition); font-weight:300; }
-        .faq-item details[open] summary { border-bottom: 1px solid var(--border-color); color: var(--accent); }
-        .faq-item details[open] summary::after { transform: rotate(45deg); }
-        .faq-item .faq-content { padding: 1rem 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-medium); border-top: 1px solid var(--border-color); margin-top:-1px;}
-        .faq-item details[open] .faq-content { animation: fadeIn 0.5s ease; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* Contact Section */
-        .contact { background-color: var(--bg-dark); }
-        .contact-container { background: var(--bg-medium-dark); border-radius: 12px; box-shadow: var(--shadow-lg); max-width: 750px; margin: 0 auto; padding: 3rem 2.5rem; }
-        .contact-container h2 { font-size: 1.875rem; margin-bottom: 1.5rem; text-align: center; color: var(--text-white); }
-        .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
-        .form-group label { font-size: 0.9rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.85); display:block; }
-        .form-group input, .form-group select, .form-group textarea { padding: 0.875rem 1rem; border: 1px solid var(--border-dark-theme); border-radius: 6px; font-size: 1rem; outline: none; transition: border-color var(--transition), box-shadow var(--transition); background-color: #111827; color: var(--text-white); font-family: 'Poppins', sans-serif; width:100%; }
-        .form-group input::placeholder, .form-group textarea::placeholder { color: #9ca3af; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(50, 221, 201, 0.3); }
-        .form-group select { appearance: none; -webkit-appearance: none; -moz-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2332ddc9' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em; }
-        .form-row { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-        @media (min-width: 600px) { .form-row { grid-template-columns: 1fr 1fr; } }
-        .btn-submit { background: var(--accent); color: var(--bg-dark); padding: 0.875rem 1.75rem; border: none; border-radius: 6px; font-size: 1.05rem; font-weight: 600; margin-top: 1rem; transition: all var(--transition); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
-        .btn-submit svg { margin-left: 0.5rem; stroke: var(--bg-dark); }
-        .btn-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
-        .contact-map iframe { filter: grayscale(0.8) invert(0.95) contrast(0.9); border-radius: 8px;}
-        #formStatus p { font-weight: 500; }
-        footer { background: var(--bg-dark); color: var(--text-light); padding: 4rem var(--container-padding) 2rem; font-size: 0.9rem; }
-        .footer-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-dark-theme); }
-        .footer-col h4 { font-size: 1.1rem; margin-bottom: 1.25rem; color: var(--text-white); font-weight: 500;}
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 0.65rem; }
-        .footer-col ul li a { color: var(--text-light); }
-        .footer-col ul li a:hover { color: var(--text-white); text-decoration: underline; }
-        .footer-col p { margin-bottom: 1rem; line-height: 1.6; }
-        .footer-social { display: flex; gap: 1rem; margin-top: 1.25rem; }
-        .footer-social a { color: var(--text-light); font-size: 1.5rem; display: inline-block; }
-        .footer-social a:hover { color: var(--text-white); transform: scale(1.15) translateY(-2px); }
-        .footer-social svg { height:28px; width:28px; }
-        .footer-bottom { text-align: center; font-size: 0.875rem; margin-top: 2.5rem; color: #9ca3af; }
-        .carousel-container { position: relative; overflow: hidden; }
-        .carousel-wrapper {
-        display:flex; scroll-snap-type:x mandatory; transition: transform .5s;
-        }
-        .carousel-item {
-        min-width:100%; position:relative; scroll-snap-align:start;
-        border-radius:12px; overflow:hidden;
-        }
-        .carousel-item img {
-        width:100%; height:auto; display:block;
-        }
-        .carousel-text {
-        position:absolute; inset:2rem; color:#fff;
-        }
-        .carousel-text h3 {
-        font-size:3rem; margin:0;
-        }
-        .carousel-text p { margin:.5rem 0; }
-        .carousel-nav {
-        position:absolute; top:50%; transform:translateY(-50%);
-        background:rgba(0,0,0,0.5); border:none; color:#fff;
-        font-size:2rem; width:3rem; height:3rem; border-radius:50%;
-        cursor:pointer;
-        }
-        .carousel-nav.prev { left:1rem; }
-        .carousel-nav.next { right:1rem; }
-
+      :root{--accent:#5dcbcb;--accent-dark:#46a3a3;--bg:#022028;--card-bg:#fff;--text:#111;--text-muted:#555}
+      *{box-sizing:border-box;padding:0;margin:0}
+      body{font-family:'Poppins',sans-serif;background:var(--bg);display:flex;justify-content:center;padding:40px 8px;min-height:100vh}
+      .container{width:100%;max-width:560px;background:var(--card-bg);border-left:10px solid var(--accent);border-radius:18px;box-shadow:0 6px 36px rgba(0,0,0,.22);padding:48px 36px 40px}
+      h1{text-align:center;font-size:1.9rem;font-weight:700;margin-bottom:14px}
+      .subheadline{text-align:center;font-size:1rem;color:var(--text-muted);margin-bottom:28px;line-height:1.45}
+      .dores{background:rgba(93,203,203,.12);border-left:6px solid var(--accent);border-radius:10px;padding:18px 20px;margin-bottom:22px;color:#19504a;font-size:1rem}
+      .personalizado{background:#e9f3f2;border-radius:10px;padding:14px 18px;font-size:1rem;font-weight:600;text-align:center;margin-bottom:20px}
+      form{display:flex;flex-direction:column;gap:16px}
+      label{font-weight:600;font-size:.95rem}
+      input,select{padding:12px 14px;border-radius:8px;border:1.5px solid #cbe9e6;font-size:.95rem;outline:none}
+      input:focus,select:focus{border-color:var(--accent)}
+      button,.cta-whatsapp{background:linear-gradient(90deg,var(--accent) 10%,var(--accent-dark) 100%);color:#fff;border:none;padding:16px;border-radius:9px;font-size:1.1rem;font-weight:700;cursor:pointer;transition:.15s;box-shadow:0 3px 10px rgba(93,203,203,.25)}
+      button:hover,.cta-whatsapp:hover{box-shadow:0 6px 16px rgba(93,203,203,.35);transform:translateY(-2px)}
+      .whats-cta{margin:24px 0 0;text-align:center}
+      .cta-whatsapp{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;width:100%}
+      .cta-whatsapp svg{width:22px;height:22px}
+      .footer{text-align:center;color:#7c9fa3;font-size:.8rem;margin-top:40px}
+      @media(max-width:600px){.container{padding:32px 20px}h1{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-inner">
-            <a href="#hero" class="logo-link">
-                <img src="https://cdn.sanity.io/images/vtdu2snp/production/1134c0bb26207343c7833808c1e7e14a1dd4050e-72x36.svg" alt="W1 Consultoria Logo" class="logo-img">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54VH7DCH"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container">
+        <h1>Planejamento Financeiro <br>100% Personalizado</h1>
+        <div class="subheadline">
+            Consultoria feita sob medida para você.<br>
+            Chega de fórmulas prontas e soluções genéricas.
+        </div>
+        <div class="dores">
+            <b>Você se identifica?</b><br>
+            <ul style="padding-left:18px; margin-top: 6px; margin-bottom:0;">
+                <li>Não sobra dinheiro no final do mês?</li>
+                <li>Tem renda boa, mas sente que não evolui?</li>
+                <li>Confuso(a) sobre onde investir?</li>
+                <li>Precisa de clareza para um grande objetivo?</li>
+                <li>Cansado(a) de planilhas e promessas genéricas?</li>
+            </ul>
+        </div>
+        <div class="personalizado">
+            O planejamento é gratuito, individualizado e sem compromisso.<br>
+            Para profissionais e famílias que buscam organização financeira.
+        </div>
+
+<form id="leadForm">
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" name="nome" required>
+
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email"
+         required placeholder="exemplo@dominio.com">
+
+  <label for="whatsapp">WhatsApp</label>
+  <input type="tel" id="whatsapp" name="whatsapp"
+         pattern="\d{10,11}" required
+         title="Digite somente números, ex.: 41999999999">
+
+  <label for="objetivo">Qual seu maior objetivo financeiro?</label>
+  <select id="objetivo" name="objetivo" required>
+    <option value="">Selecione</option>
+    <option value="organizar">Organizar minha vida financeira</option>
+    <option value="investir">Aprender a investir melhor</option>
+    <option value="dividas">Sair das dívidas</option>
+    <option value="comprar-imovel">Comprar um imóvel</option>
+    <option value="aposentadoria">Planejar a aposentadoria</option>
+    <option value="outro">Outro</option>
+  </select>
+
+  <button type="submit">Quero meu Planejamento Gratuito</button>
+</form>
+
+ <div class="whats-cta" style="display:none;" id="whatsSuccess">
+            <a href="#" class="cta-whatsapp" id="whatsLink" target="_blank">
+                <svg fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M16.58 13.79c-.23-.12-1.35-.67-1.56-.74-.21-.08-.36-.12-.51.12-.15.23-.58.74-.71.89-.13.15-.26.17-.48.06-.23-.12-.98-.36-1.87-1.13-.69-.62-1.16-1.39-1.29-1.62-.13-.23-.01-.35.1-.46.11-.12.23-.31.34-.46.12-.15.15-.26.23-.43.08-.17.04-.32-.02-.45-.07-.12-.51-1.23-.7-1.68-.19-.46-.38-.4-.51-.41-.13-.01-.28-.01-.43-.01-.15 0-.4.06-.61.28-.21.22-.8.78-.8 1.9 0 1.12.82 2.2.93 2.36.11.15 1.61 2.45 3.95 3.34.55.19.98.31 1.31.4.55.14 1.04.12 1.43.07.44-.07 1.35-.55 1.54-1.08.19-.53.19-.98.14-1.08-.06-.1-.21-.16-.44-.28zm-4.58 7.21c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14.5C7.01 6.5 4.5 9.01 4.5 12s2.51 5.5 5.5 5.5 5.5-2.51 5.5-5.5-2.51-5.5-5.5-5.5z"/></svg>
+                Falar direto no WhatsApp
             </a>
-            <!-- Botão hambúrguer agora só é mostrado em desktop (> 992 px) enquanto o nav também aparece
-            — nos mobiles ambos ficam ocultos -->
-            <button class="mobile-menu-btn" aria-label="Abrir menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-            </button>
-            <nav id="mainNav">
-                <ul class="nav-list" id="navList">
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#solutions">Soluções</a></li>
-                    <li><a href="#passo-a-passo">Como Funciona</a></li>
-                    <li><a href="#about">Sobre Mim</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact" class="btn btn-primary">Fale Comigo
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 18 10" fill="none" stroke-width="2.5" stroke="currentColor">
-                            <path d="M0 5H17M17 5L13 1M17 5L13 9"></path>
-                        </svg>
-                    </a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
-    <div class="progress-bar" id="progressBar"></div>
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <span class="section-tag">Planejamento Financeiro Pessoal</span>
-                <h1>Sinta a sensação de transformar seus objetivos em conquistas</h1>
-        <p>
-                    Planejamento Financeiro 100% personalizado está a um clique de distância.
-                Vamos construir juntos o futuro que você deseja.
-                </p>
-                <a href="#contact" class="btn-primary">
-                Fale com um especialista
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10"
-                    viewBox="0 0 18 10" fill="none" stroke-width="2.5" stroke="currentColor">
-                    <path d="M0 5H17M17 5L13 1M17 5L13 9"/>
-                </svg>
-                </a>
-            </div>
-            </section>
-
-
-        <!-- Solutions Section -->
-        <section class="solutions-pf" id="solutions">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Como Posso Ajudar</span>
-                    <h2 class="section-title">Soluções para Desbloquear seu Potencial Financeiro</h2>
-                    <p class="section-subtitle">Serviços completos e personalizados para cada fase da sua vida, garantindo segurança, crescimento e a realização dos seus sonhos.</p>
-                </div>
-                <div class="solutions-pf-grid">
-                    <div class="solution-pf-card">
-                        <div class="solution-pf-icon">
-                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0h9.75m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
-                        </div>
-                        <h3>Gestão de Fluxo de Caixa Inteligente</h3>
-                        <p>Organize suas receitas e despesas, elimine gastos desnecessários e potencialize sua capacidade de poupar e investir todos os meses.</p>
-                        <a href="#contact">Saiba Mais &rarr;</a>
-                    </div>
-                    <div class="solution-pf-card">
-                        <div class="solution-pf-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg>
-                        </div>
-                        <h3>Blindagem Pessoal e Patrimonial</h3>
-                        <p>Proteja você, sua família e seus bens com as melhores soluções de seguros e planejamento sucessório, garantindo tranquilidade para o futuro.</p>
-                        <a href="#contact">Saiba Mais &rarr;</a>
-                    </div>
-                    <div class="solution-pf-card">
-                        <div class="solution-pf-icon">
-                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 01-8.314 1.442zM2.25 18a11.95 11.95 0 015.302-9.622l1.012-1.012a3.75 3.75 0 015.303 0l4.306 4.306a3.75 3.75 0 010 5.303l-1.012 1.012A11.95 11.95 0 012.25 18z" /></svg>
-                        </div>
-                        <h3>Plano de Investimentos</h3>
-                        <p>Construa uma carteira de investimentos sólida e diversificada, alinhada ao seu perfil de risco e objetivos, para fazer seu dinheiro render de verdade.</p>
-                        <a href="#contact">Saiba Mais &rarr;</a>
-                    </div>
-                    <div class="solution-pf-card">
-                        <div class="solution-pf-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.003L7.5 12.75l2.25 2.25 4.5-4.5L16.5 14.25l4.5-4.5m-2.121-3.535l-4.142-4.142a.75.75 0 00-1.061 0L3 11.25l4.142 4.142a.75.75 0 001.061 0l4.142-4.142a.75.75 0 000-1.06z" /></svg>
-                        </div>
-                        <h3>Crescimento de Patrimônio</h3>
-                        <p>Estratégias avançadas de alocação de ativos e otimização fiscal para acelerar a construção e a perpetuação do seu legado financeiro.</p>
-                        <a href="#contact">Saiba Mais &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-
-        <!-- Passo a Passo Section -->
-        <section class="passo-a-passo dark-section" id="passo-a-passo">
-            <div class="container">
-                 <div class="section-header">
-                    <span class="section-tag">Etapas da Consultoria</span>
-                    <h2 class="section-title">Um Processo Simples e Transparente para o Seu Sucesso</h2>
-                    <p class="section-subtitle">Descubra como funciona a consultoria, guiando você em cada passo da sua jornada financeira.</p>
-                </div>
-                <ul class="timeline">
-                    <li class="timeline-item">
-                        <div class="timeline-number">01</div>
-                        <div class="timeline-content">
-                            <h3>Análise e Diagnóstico</h3>
-                            <p>Tudo começa com uma conversa profunda para entender sua vida, seus sonhos e seus números. Analiso seu perfil e sua situação atual para traçar um diagnóstico financeiro completo.</p>
-                        </div>
-                    </li>
-                    <li class="timeline-item">
-                        <div class="timeline-number">02</div>
-                        <div class="timeline-content">
-                            <h3>Avaliação e Estratégia</h3>
-                            <p>Com o diagnóstico em mãos, apresento uma avaliação clara das oportunidades e desenvolvo as melhores estratégias personalizadas para cada um dos seus objetivos de vida.</p>
-                        </div>
-                    </li>
-                     <li class="timeline-item">
-                        <div class="timeline-number">03</div>
-                        <div class="timeline-content">
-                            <h3>Consultoria e Plano de Ação</h3>
-                            <p>Você recebe seu Planejamento Financeiro 360º. Um guia detalhado com todas as estratégias, desde investimentos até proteção, para que você tenha total clareza do caminho a seguir.</p>
-                        </div>
-                    </li>
-                     <li class="timeline-item">
-                        <div class="timeline-number">04</div>
-                        <div class="timeline-content">
-                            <h3>Acompanhamento e Conquistas</h3>
-                            <p>Estarei ao seu lado na implementação do plano, com reuniões recorrentes para acompanhar seu progresso, fazer ajustes e celebrar cada conquista na sua jornada.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-
-
-        <!-- Seção de Tecnologia - S1nc -->
-        <section id="w1-technology" class="feature">
-        <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; padding:4rem 0;">
-            <div class="text-block">
-            <span class="section-tag">W1 Technology</span>
-            <h2 class="section-title">Planejamento financeiro data-driven potencializado por alta tecnologia</h2>
-            <p>Permita-se experimentar um planejamento financeiro onde vamos juntos vamos tomar controle da sua vida financeira centralizando e planejando tudo em um só lugar.</p>
-            <a href="#contato" class="btn btn-primary">Quero potencializar minhas finanças</a>
-            </div>
-            <div class="video-block" style="aspect-ratio:16/9;">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GFbWryCtSBU?si=pyyGpS7I_HuNSzHn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-        </section>
-
-        
-        <!-- Social Proof Section -->
-        <section class="social-proof" id="social-proof">
-        <div class="social-proof-overlay">
-            <div class="social-proof-content">
-            <h2><span class="highlight-number">94%</span></h2>
-            <p>dos meus clientes me recomendam para amigos e familiares.<br>
-                Porque quando alguém sente clareza financeira, quer dividir isso com quem ama.</p>
-            <a href="#contact" class="btn btn-primary">Quero Ser o Próximo</a>
-            </div>
-        </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials" id="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Resultados Reais</span>
-                    <h2 class="section-title">O Valor de uma Consultoria de Confiança</h2>
-                    <p class="section-subtitle">Pessoas que transformaram suas finanças com uma consultoria personalizada e estratégica.</p>
-                </div>
-                <div class="testimonial-wrapper">
-                    <div class="testimonial-list" id="testimonialList">
-                        <div class="testimonial-card-v2">
-                            <div class="quote-icon">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="58" height="22" viewBox="0 0 58 22" fill="none"><rect x="1" y="12" width="57" height="10" fill="#F6F8F8"></rect><rect width="57" height="12" fill="white"></rect><path d="M31.9316 18V10.6398L37.9829 0H41.0441L37.0574 9.41949L40.1542 9.61017V18H31.9316ZM19.117 18V10.6398L25.2039 0H28.2652L24.2784 9.41949L27.3397 9.61017V18H19.117Z" fill="#CBDAD9"></path></svg>
-                            </div>
-                            <p class="quote">"Não conhecia quase nada de economia e investimentos. Com a ajuda do Leonardo, fiz meu primeiro planejamento e hoje tenho segurança para investir e pensar no futuro."</p>
-                            <div class="author-separator"></div>
-                            <div class="testimonial-author">Vitor M.</div>
-                            <div class="testimonial-role">Engenheiro de Software</div>
-                        </div>
-                        <div class="testimonial-card-v2">
-                             <div class="quote-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="22" viewBox="0 0 58 22" fill="none"><rect x="1" y="12" width="57" height="10" fill="#F6F8F8"></rect><rect width="57" height="12" fill="white"></rect><path d="M31.9316 18V10.6398L37.9829 0H41.0441L37.0574 9.41949L40.1542 9.61017V18H31.9316ZM19.117 18V10.6398L25.2039 0H28.2652L24.2784 9.41949L27.3397 9.61017V18H19.117Z" fill="#CBDAD9"></path></svg>
-                             </div>
-                            <p class="quote">"Eu comecei sem nada. Hoje, com o planejamento do Léo, tenho duas academias, um box de crossfit e estou prestes a abrir mais duas. A organização que ele trouxe foi fundamental."</p>
-                            <div class="author-separator"></div>
-                            <div class="testimonial-author">Guilherme</div>
-                            <div class="testimonial-role">Empreendedor</div>
-                        </div>
-                        <div class="testimonial-card-v2">
-                            <div class="quote-icon">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="58" height="22" viewBox="0 0 58 22" fill="none"><rect x="1" y="12" width="57" height="10" fill="#F6F8F8"></rect><rect width="57" height="12" fill="white"></rect><path d="M31.9316 18V10.6398L37.9829 0H41.0441L37.0574 9.41949L40.1542 9.61017V18H31.9316ZM19.117 18V10.6398L25.2039 0H28.2652L24.2784 9.41949L27.3397 9.61017V18H19.117Z" fill="#CBDAD9"></path></svg>
-                            </div>
-                            <p class="quote">"Estou passando para agradecer a consultoria. Foi essencial para eu ter clareza e tomar as melhores decisões para proteger o futuro da minha família. Recomendo de olhos fechados!"</p>
-                            <div class="author-separator"></div>
-                            <div class="testimonial-author">Guilherme C.</div>
-                            <div class="testimonial-role">Médico</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-nav">
-                        <button id="prevTestimonial" aria-label="Depoimento Anterior" disabled>&#8249;</button>
-                        <button id="nextTestimonial" aria-label="Próximo Depoimento">&#8250;</button>
-                    </div>
-                </div>
-            </section>
-        
-        <!-- About Section -->
-        <section class="about" id="about">
-            <div class="container about-container">
-                <div class="about-text">
-                    <span class="section-tag">Sobre Mim</span>
-                    <h2 class="section-title">Leonardo Graciano</h2>
-                    <p>Como consultor financeiro na W1 Consultoria, minha paixão é traduzir a complexidade do mercado financeiro em estratégias claras e acessíveis para pessoas como você. Com mais de uma década de experiência, ajudo meus clientes a construir um futuro financeiro sólido, seja para a aposentadoria, para proteger a família ou para realizar grandes sonhos.</p>
-                    <p>Acredito que um bom planejamento financeiro é a base para a liberdade e a tranquilidade. Meu trabalho é ser seu parceiro nessa jornada, oferecendo orientação personalizada e as melhores soluções do mercado.</p>
-                    <a href="https://www.linkedin.com/in/leonardo-graciano/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Conecte-se no LinkedIn</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://consultoria.leonardograciano.com.br/leonardo.jpg" alt="Leonardo Graciano, Consultor Financeiro Pessoal">
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq" id="faq">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Dúvidas?</span>
-                    <h2 class="section-title">Perguntas Frequentes</h2>
-                    <p class="section-subtitle">Encontre respostas para as dúvidas mais comuns sobre o planejamento financeiro pessoal.</p>
-                </div>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <details>
-                            <summary>Eu preciso ter muito dinheiro para começar um planejamento financeiro?</summary>
-                            <div class="faq-content">
-                                <p>Não. O planejamento financeiro é para todos, independentemente do seu patrimônio atual. O mais importante é a sua disposição para organizar suas finanças e planejar o futuro. A consultoria se adapta à sua realidade para criar um plano viável e eficiente para você.</p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="faq-item">
-                        <details>
-                            <summary>Como a consultoria pode me ajudar a me aposentar mais cedo?</summary>
-                            <div class="faq-content">
-                                <p>Através de um planejamento de aposentadoria, analisamos seu padrão de vida desejado, calculamos o montante necessário e criamos uma estratégia de investimentos e aportes mensais para que você alcance sua independência financeira no prazo que desejar, com segurança.</p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="faq-item">
-                        <details>
-                            <summary>Meu dinheiro estará seguro?</summary>
-                            <div class="faq-content">
-                                <p>Sim. Como consultor, meu papel é orientar sobre as melhores estratégias e produtos do mercado. Seu patrimônio permanecerá em seu nome, em instituições financeiras sólidas e regulamentadas. A W1 Consultoria é parceira da XP Investimentos, garantindo acesso aos melhores produtos com toda a segurança.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact dark-section" id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Próximo Passo</span>
-                    <h2 class="section-title">Vamos Iniciar sua Jornada Rumo à Liberdade Financeira?</h2>
-                    <p class="section-subtitle">Preencha o formulário para um primeiro contato sem compromisso. Estou pronto para entender seus objetivos e desenhar um futuro financeiro próspero para você e sua família.</p>
-                </div>
-                <div class="contact-container">
-                    <form id="contactForm" class="contact-form" method="post" autocomplete="off">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="nomeC">Nome Completo*</label>
-                                <input type="text" id="nomeC" name="nomeC" placeholder="Seu nome completo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="emailC">Seu Melhor E-mail*</label>
-                                <input type="email" id="emailC" name="email" placeholder="seu.email@dominio.com" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="profissao">Sua Profissão*</label>
-                                <input type="text" id="profissao" name="profissao" placeholder="Ex: Médico, Advogado, etc." required>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefoneC">Telefone/WhatsApp*</label>
-                                <input type="tel" id="telefoneC" name="telefoneC" placeholder="(XX) XXXXX-XXXX" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="perfil_financeiro">Qual seu perfil financeiro hoje?*</label>
-                                <select id="perfil_financeiro" name="perfil_financeiro" required>
-                                    <option value="">Selecione seu perfil</option>
-                                    <option value="poupador">Poupador (Consigo guardar dinheiro)</option>
-                                    <option value="zero_a_zero">Zero a Zero (Gasto tudo que ganho)</option>
-                                    <option value="devedor">Devedor (Estou no vermelho)</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="faixa_renda">Sua faixa de renda mensal?*</label>
-                                <select id="faixa_renda" name="faixa_renda" required>
-                                    <option value="">Selecione a faixa de renda</option>
-                                    <option value="ate_5k">Até R$ 5.000</option>
-                                    <option value="5k_10k">Entre R$ 5.000 e R$ 10.000</option>
-                                    <option value="10k_20k">Entre R$ 10.000 e R$ 20.000</option>
-                                    <option value="acima_20k">Acima de R$ 20.000</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="objetivoC">Principal Objetivo Financeiro*</label>
-                            <select id="objetivoC" name="objetivoC" required>
-                                <option value="">Selecione seu principal objetivo</option>
-                                <option value="aposentadoria">Planejar Aposentadoria</option>
-                                <option value="liberdade_financeira">Alcançar a Liberdade Financeira</option>
-                                <option value="proteger_familia">Proteger minha Família e Patrimônio</option>
-                                <option value="investir_melhor">Investir Melhor meu Dinheiro</option>
-                                <option value="organizar_dividas">Organizar minhas Finanças/Dívidas</option>
-                                <option value="outro">Outro (descreva abaixo)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensagemC">Deixe uma mensagem (opcional)</label>
-                            <textarea id="mensagemC" name="mensagemC" rows="4" placeholder="Se quiser, conte um pouco mais sobre seus objetivos."></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Iniciar Minha Jornada Financeira
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none" stroke-width="2.5">
-                                <path d="M0 5H17M17 5L13 1M17 5L13 9"></path>
-                            </svg>
-                        </button>
-                    </form>
-                    <div id="formStatus" style="margin-top: 1.5rem; text-align: center;"></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-col">
-                    <a href="#hero">
-                       <img src="https://cdn.sanity.io/images/vtdu2snp/production/1134c0bb26207343c7833808c1e7e14a1dd4050e-72x36.svg" alt="W1 Consultoria Logo" style="height: 38px; margin-bottom: 1.5rem;">
-                    </a>
-                    <p>Leonardo Graciano, seu parceiro estratégico na W1 Consultoria para o sucesso financeiro do seu negócio.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#solutions">Soluções</a></li>
-                        <li><a href="#passo-a-passo">Como Funciona</a></li>
-                        <li><a href="#about">Sobre Mim</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Entre em Contato</h4>
-                     <ul>
-                        <li><a href="mailto:leonardograciano.w1@gmail.com">leonardograciano.w1@gmail.com</a></li>
-                        <li><a href="https://wa.me/5541991937663" target="_blank" rel="noopener noreferrer">(41) 99193-7663</a></li>
-                        <li>Barigüi Business Center, Curitiba - PR</li>
-                    </ul>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/leograciano_" aria-label="Instagram de Leonardo Graciano" target="_blank" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.917 3.917 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.916 3.916 0 0 0-.923-1.417A3.916 3.916 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.095.047-3.232.047s-2.39-.009-3.232-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.095-.046-3.231s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zM8 4.865a3.135 3.135 0 1 0 0 6.27 3.135 3.135 0 0 0 0-6.27zM8 9.58a1.58 1.58 0 1 1 0-3.16 1.58 1.58 0 0 1 0 3.16zm4.562-5.186a.82.82 0 1 0 0 1.64.82.82 0 0 0 0-1.64z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/leonardo-graciano/" aria-label="LinkedIn de Leonardo Graciano" target="_blank" rel="noopener noreferrer">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v6.088h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                Leonardo Graciano | W1 Consultoria Financeira Empresarial &copy; <span id="currentYear"></span>. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        (function() {
-            const counters = document.querySelectorAll('.stat-number');
-            if (counters.length === 0) return;
-            const obsOptions = { threshold: 0.3, rootMargin: '0px 0px -50px 0px' };
-            
-            const animate = el => {
-                const target = +el.getAttribute('data-target');
-                if (isNaN(target) || el.dataset.animated) return; 
-                el.dataset.animated = true;
-                let count = 0;
-                const duration = 2000;
-                const frameDuration = 1000 / 60; 
-                const totalFrames = Math.round(duration / frameDuration);
-                let increment = target / totalFrames;
-                if (target === 0) increment = 0;
-                function updateCount() {
-                    count += increment;
-                    if ((increment > 0 && count < target) || (increment < 0 && count > target)) {
-                        el.textContent = Math.ceil(count);
-                        requestAnimationFrame(updateCount);
-                    } else {
-                        el.textContent = target;
-                    }
-                }
-                requestAnimationFrame(updateCount);
-            };
-
-            const observer = new IntersectionObserver((entries, o) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        animate(entry.target);
-                        o.unobserve(entry.target); 
-                    }
-                });
-            }, obsOptions);
-            counters.forEach(c => observer.observe(c));
-        })();
-
-        (function() {
-            const container = document.getElementById('pillarsContainer');
-            if (!container) return;
-            const items = container.querySelectorAll('.pillar-item-w1');
-            items.forEach(item => {
-                item.addEventListener('click', () => {
-                    const currentActive = container.querySelector('.pillar-item-w1.active');
-                    if (currentActive && currentActive !== item) {
-                        currentActive.classList.remove('active');
-                    }
-                    item.classList.toggle('active');
-                });
-            });
-        })();
-
-        (function() {
-            const list = document.getElementById('testimonialList');
-            const prevButton = document.getElementById('prevTestimonial');
-            const nextButton = document.getElementById('nextTestimonial');
-            if (!list || !prevButton || !nextButton) return;
-            const cards = Array.from(list.children);
-            if (cards.length <= 1) { 
-                 prevButton.style.display = 'none';
-                 nextButton.style.display = 'none';
-                 return;
-            }
-
-            let index = 0;
-            const totalCards = cards.length;
-
-            function updateButtons() {
-                prevButton.disabled = index === 0;
-                nextButton.disabled = index === totalCards - 1;
-            }
-
-            function showCard(i) {
-                list.style.transform = `translateX(-${i * 100}%)`;
-                updateButtons();
-            }
-            list.style.display = 'flex';
-            list.style.transition = 'transform 0.4s cubic-bezier(0.65, 0, 0.35, 1)';
-            cards.forEach(card => {
-                card.style.minWidth = '100%';
-                card.style.flexShrink = '0';
-                card.style.padding = '0 0.75rem';
-            });
-            list.parentElement.style.padding = '0 0.25rem'; 
-
-            prevButton.addEventListener('click', () => {
-                index = Math.max(0, index - 1);
-                showCard(index);
-            });
-            nextButton.addEventListener('click', () => {
-                index = Math.min(totalCards - 1, index + 1);
-                showCard(index);
-            });
-            updateButtons();
-        })();
-
-       // ...substitua o bloco antigo pelo novo abaixo...
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-    if (!form) return;
-
-    const submitButton = form.querySelector('button[type="submit"]');
-    const originalButtonHTML = submitButton.innerHTML;
-    const webhookUrl = 'https://primary-production-a61c.up.railway.app/webhook/pessoa-fisica';
-
-    form.addEventListener('submit', async function(event) {
-        event.preventDefault();
-
-        if(formStatus) formStatus.innerHTML = '';
-        submitButton.disabled = true;
-        submitButton.innerHTML = 'Enviando...';
-
-        const formData = new FormData(form);
-        const data = {};
-        formData.forEach((value, key) => { data[key] = value; });
-
-        try {
-            const response = await fetch(webhookUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-
-            if (!response.ok) {
-                throw new Error('Erro ao enviar. Código: ' + response.status);
-            }
-
-            form.reset();
-            if(formStatus) formStatus.innerHTML = '<p style="color: #32ddc9;">Cadastro enviado com sucesso! Redirecionando...</p>';
-            setTimeout(() => {
-                window.location.href = 'obrigado.html';
-            }, 1200);
-        } catch (error) {
-            if(formStatus) formStatus.innerHTML = '<p style="color: #ff6b6b;">Erro ao enviar. Tente novamente.</p>';
-            console.error('Erro no envio:', error);
-        } finally {
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalButtonHTML;
-        }
+        <footer class="footer">Leonardo Graciano © 2025</footer>
+    <div id="cookie-placeholder"></div>
+        <script>
+        fetch("/partials/cookie-banner.html")
+         .then(r=>r.text()).then(h=>document.getElementById("cookie-placeholder").innerHTML=h);
+        </script>
+<script>
+    /* CONFIG */
+    const numeroWpp = '{{WHATSAPP}}';
+    const WEBHOOK   = '{{WEBHOOK_URL}}';
+    const ORIGEM    = 'Landing PF Planejamento';
+    
+    /* ENVIA PRO N8N */
+    async function enviaLead(dados){
+      try{
+        await fetch(WEBHOOK,{
+          method:'POST',
+          headers:{'Content-Type':'application/json'},
+          body:JSON.stringify(dados)
+        });
+      }catch(e){
+        console.error('Falha webhook:',e);
+      }
+    }
+    
+    /* HANDLER */
+    document.getElementById('leadForm').addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      if(!e.target.reportValidity())return;
+    
+      const nome   = document.getElementById('nome').value.trim();
+      const email  = document.getElementById('email').value.trim();
+      const fone   = document.getElementById('whatsapp').value.replace(/\D/g,'');
+      const objTxt = document.getElementById('objetivo')
+                      .options[document.getElementById('objetivo').selectedIndex].text;
+    
+      /* monta payload */
+      const dados={
+        origem:ORIGEM,
+        nome,email,telefone:fone,objetivo:objTxt
+      };
+      await enviaLead(dados);
+    
+      /* monta link WhatsApp */
+      const mensagem = encodeURIComponent(
+        `Olá! Quero agendar meu planejamento financeiro gratuito.\n\n`+
+        `Nome: ${nome}\nE-mail: ${email}\nWhatsApp: ${fone}\nObjetivo: ${objTxt}`
+      );
+      const link = `https://wa.me/${numeroWpp}?text=${mensagem}`;
+    
+      /* feedback visual */
+      document.getElementById('leadForm').style.display='none';
+      document.getElementById('whatsSuccess').style.display='block';
+      document.getElementById('whatsLink').href = link;
     });
-});
-
-    </script>
-    <script>
-        const testimonialList = document.getElementById('testimonialList');
-        const prevBtn = document.getElementById('prevTestimonial');
-        const nextBtn = document.getElementById('nextTestimonial');
-
-        let currentSlide = 0;
-        let totalCards = testimonialList.children.length;
-
-        function getVisibleCount() {
-            if (window.innerWidth >= 992) return 3;
-            if (window.innerWidth >= 640) return 2;
-            return 1;
-        }
-
-        function updateSlider() {
-            const visible = getVisibleCount();
-            const offset = -currentSlide * (100 / visible);
-            testimonialList.style.transform = `translateX(${offset}%)`;
-
-            // Habilita ou desabilita os botões
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide >= Math.ceil(totalCards / visible) - 1;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            if (currentSlide > 0) {
-            currentSlide--;
-            updateSlider();
-            }
-        });
-
-        nextBtn.addEventListener('click', () => {
-            const maxSlides = Math.ceil(totalCards / getVisibleCount());
-            if (currentSlide < maxSlides - 1) {
-            currentSlide++;
-            updateSlider();
-            }
-        });
-
-        window.addEventListener('resize', () => {
-            currentSlide = 0;
-            updateSlider();
-        });
-
-        updateSlider();
 </script>
-
-    <!-- Progress Bar Script -->
-    <script> 
-        (function() {
-        const bar = document.getElementById('progressBar');
-        if (!bar) return;
-        const header = document.querySelector('header');
-        if (!header) return;
-
-        function updateProgressBar() {
-            const headerHeight = header.offsetHeight;
-            bar.style.top = headerHeight + 'px';
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const pct = totalHeight > 0 ? (scrollTop / totalHeight) * 100 : 0;
-            bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
-        }
-
-        window.addEventListener('scroll', updateProgressBar);
-        window.addEventListener('resize', updateProgressBar);
-        updateProgressBar();
-        setTimeout(updateProgressBar, 100);
-        })();
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleBtn = document.getElementById('mobileToggle');
-            const nav = document.getElementById('navMenu');
-
-            toggleBtn.addEventListener('click', () => {
-            nav.classList.toggle('open');
-            toggleBtn.classList.toggle('active');
-            });
-        });
-    </script>
-
-    <a href="#contact" class="mobile-cta">Fale comigo</a>
+       
 </body>
 </html>
