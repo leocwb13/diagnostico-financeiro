@@ -80,50 +80,7 @@
         .dark-section .section-title, .dark-section .section-subtitle { color: var(--text-white); }
         .dark-section .section-subtitle { color: rgba(255,255,255,0.85); }
 
-        /* === HEADER ========================================================== */
-        header {
-        background: #012028;
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        z-index: 1000;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: var(--shadow-sm);
-        height: var(--header-height);
-        display: flex;
-        align-items: center;
-        }
-        .header-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        }
-        /* hambúrguer só desktop, some depois */
-        .mobile-menu-btn {
-        background: none;
-        border: none;
-        font-size: 1.75rem;
-        color: var(--text-dark);
-        cursor: pointer;
-        padding: .5rem;
-        }
-
-        /* iframe totalmente fluido e sem overflow lateral ------------------ */
-        .video-block{
-        width:100%;
-        aspect-ratio:16/9;             /* já existia – mantemos            */
-        }
-        .video-block iframe{
-        width:100%!important;
-        height:100%!important;
-        border:0;
-        }
-        /* garante que o grid mude para 1 coluna abaixo de 768 px ------------ */
-        @media(max-width:767px){
-        #w1-technology .container{
-            grid-template-columns:1fr!important;
-        }
-        }
+       
 
         /* NAV DESKTOP */
         @media (min-width: 992px) {
